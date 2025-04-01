@@ -21,13 +21,13 @@ Fixed::Fixed(Fixed const & src)
 
 Fixed::Fixed(int const constInt)
 {
-    _value = (int)(constInt * (1 << Fixed::fractinnalBits));
+    _value = (int)roundf(constInt * (1 << _fractionalBits));
     return;
 }
 
 Fixed::Fixed(float const constFloat)
 {
-    _value = (float)roundf(constFloat * (1 << Fixed::fractinnalBits));
+    _value = (float)roundf(constFloat * (1 << _fractionalBits));
     return;
 }
 
@@ -52,12 +52,12 @@ Fixed & Fixed::operator=(const Fixed & rhs)
 
 float Fixed::toFloat( void ) const
 {
-    return (float)_value / (1 << Fixed::fractinnalBits);
+    return (float)_value / (1 << _fractionalBits);
 }
 
 int Fixed::toInt( void ) const
 {
-    return (int)_value / (1 << Fixed::fractinnalBits);
+    return (int)_value / (1 << _fractionalBits);
 }
 
 std::ostream & operator<<(std:: ostream & o, Fixed const & rhs)
