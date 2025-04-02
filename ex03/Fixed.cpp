@@ -31,7 +31,7 @@ Fixed::Fixed(float const constFloat)
     return;
 }
 
-int Fixed::getRawBits(void) const
+int Fixed::getRawBits() const
 {
     // std::cout << "getRawBits member function called" << std::endl;
     return _value;

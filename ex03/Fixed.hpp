@@ -36,7 +36,6 @@ class Fixed
         static const Fixed& min(Fixed const & a, Fixed const & b);
         static const Fixed& max(Fixed const & a, Fixed const & b);
 
-
     private:
         int _value;
         static const int _fractionalBits = 8;
