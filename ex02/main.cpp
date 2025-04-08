@@ -31,13 +31,6 @@ int main( void )
 		std::cout << " b             : " << b << std::endl;
 
 		std::cout << " max( a, b )   : " << Fixed::max( a, b ) << std::endl;
-
-		std::cout << " a == b        : " << (a == b) << std::endl;
-		std::cout << " a != b        : " << (a != b) << std::endl;
-		std::cout << " a >= b        : " << (a >= b) << std::endl;
-		std::cout << " a <= b        : " << (a <= b) << std::endl;
-		std::cout << " a > b         : " << (a > b) << std::endl;
-		std::cout << " a < b         : " << (a < b) << std::endl;
 	}
 	{
 		printHeader("Test 2 : --, /, min()");
@@ -108,7 +101,6 @@ int main( void )
 	}
 	return 0;
 }
-
 
 /*
 $> ./a.out

@@ -21,19 +21,20 @@ Fixed::Fixed(Fixed const & src)
 
 Fixed::Fixed(int const constInt)
 {
+	std::cout << "Int constructor called" << std::endl;
     _value = (int)roundf(constInt * (1 << _fractionalBits));
     return;
 }
 
 Fixed::Fixed(float const constFloat)
 {
+	std::cout << "Float constructor called" << std::endl;
     _value = (float)roundf(constFloat * (1 << _fractionalBits));
     return;
 }
 
 int Fixed::getRawBits() const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return _value;
 }
 
